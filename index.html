@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>SIGPD | Sistemas Integrados para Gestão e Pocessamento de Dados</title>
+
+		<!-- Estilos -->
+		<link href="./css/reset.css" rel="stylesheet" />
+		<link href="./css/jquery-ui.min.css" rel="stylesheet" />
+		<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="./css/font_icon/css/icones.css" rel="stylesheet" />
+		<link href="./css/estilo.css" rel="stylesheet" />
+		<link href="./css/tabela.css" rel="stylesheet" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+		<!-- Scripts -->
+		<script src="./css/external/jquery/jquery.js"></script>
+		<script src="./js/jquery-2.2.4.js"></script>
+		<script src="./bootstrap/js/bootstrap.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<script src="./js/datepicker-pt-BR.js"></script>
+		<script src="./js/functions.js"></script>
+		<script src="./js/menu.js"></script>
+		<script src="./js/datas.js"></script>
+
+	</head>
+	
+	<body>
+	
+		<header>  
+			<h1>Logo</h1>
+			
+			<div class="menu-hamburger">
+				<i class=" 	glyphicon glyphicon-menu-hamburger"></i>
+			</div>
+
+			<div class="usuario">				
+			    <div class="user"><i class="icon-user"></i> USUÁRIO</div>
+			    <div class="uor"><i class="icon-layers"></i> CONECTADO A: LOCAL</div>
+			    <div class="help"><a href="#" title="Perguntas frequentes" target="_blank">?</a></div>
+				<div class="comunicados">
+					<i class="icon-speech_4" title="Comunicados"><span>0</span></i>
+				</div>
+			    <a href="javascript:send('sair')" class="sair" title="Sair"><i class="icon-power"></i></a>
+			</div>
+		</header>
+		
+		<nav class="menu-principal">
+         <div class="menu-titulo"></div>
+         <div class="modulos"><ul></ul></div>
+         <div id="menu">
+         <ul>
+            <li><i class="icon-user"></i>Cadastro Único
+               <ul>
+                  <li><i class="icon-pin_2"></i>Endereços
+                     <ul>
+                        <li><a href="#">Bairros</a></li>
+                        <li><a href="#">Distritos</a></li>
+                        <li><a href="#">Estados</a></li>
+                        <li><a href="#">Logradouros</a></li>
+                        <li><a href="#">Municípios</a></li>
+                        <li><a href="#">Países</a></li>
+                        <li><a href="#">Regiões</a></li>
+                        <li><a href="#">Segmentos</a></li>
+                        <li><a href="#">Tipo Logradouros</a></li>
+                        <li><a href="#">Visões</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-users"></i>Pessoas
+                     <ul>
+                        <li><a href="#">Pessoas Físicas</a></li>
+                        <li><a href="#">Pessoas Jurídicas</a></li>
+                        <li><a href="#">Auditoria Duplicidade</a></li>
+                     </ul>
+                  </li>                  
+               </ul>
+            </li>
+            <li><i class="icon-cog"></i>Configuração SIGPD
+               <ul>
+                  <li><i class="icon-square_ok"></i>Permissões
+                     <ul>
+                        <li><a href="#">Permissões por Usuário</a></li>
+                        <li><a href="#">Permissões por Grupo</a></li>
+                     </ul>
+                  </li>                  
+                  <li><i class="icon-speech_4"></i>Comunicados
+                     <ul>
+                        <li><a href="#">Cad Comunicados</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-tags"></i>Funcionalidades
+                     <ul>
+                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="#">Cadastrar Dominios</a></li>
+                        <li><a href="#">Visualizar</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-cog"></i>Parâmetros de Sistema
+                     <ul>
+                        <li><a href="#">Configurar</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-users"></i>Usuários
+                     <ul>
+                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="#">Cadastrar Grupo</a></li>
+                        <li><a href="#">Vincular Grupos</a></li>
+                        <li><a href="#">Vincular Unidades</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li><i class="icon-heart"></i>Cadastro Saúde
+               <ul>
+                  <li><i class="icon-calendar"></i>Agenda
+                     <ul>
+                        <li><a href="#">Agendamentos</a></li>
+                        <li><a href="#">Alterar Agendamento</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-speech_4"></i>Atendimento
+                     <ul>
+                        <li><a href="#">Cad Atendimento em Grupo</a></li>
+                        <li><a href="#">Cad Atendimento Especial</a></li>
+                        <li><a href="#">Cad Atendimento Externo</a></li>
+                        <li><a href="#">Cad Entrada Urgência</a></li>
+                        <li><a href="#">Cad Prescrição</a></li>
+                        <li><a href="#">Cad Tipo Atendimento</a></li>
+                        <li><a href="#">Cad Urgência</a></li>
+                        <li><a href="#">Consultar Cid</a></li>
+                        <li><a href="#">Consultar Fila Atendimento Pacientes</a></li>
+                        <li><a href="#">Controlar Fila de Atendimentos </a></li>
+                        <li><a href="#">Demanda Espontânea</a></li>
+                        <li><a href="#">Executar Autorização</a></li>
+                        <li><a href="#">Fila Atendimentos Recepção</a></li>
+                        <li><a href="#">Fila de Atendimentos</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-square_ok"></i>Especialidade
+                     <ul>
+                        <li><a href="#">Cad Especialidade</a></li>
+                     </ul>
+                  </li>
+                  <li><i class=""></i>Gestão de Leitos
+                     <ul>
+                        <li><a href="#">Bloquear Leito</a></li>
+                        <li><a href="#">Cad Entrada Leito</a></li>
+                        <li><a href="#">Cad Leito</a></li>
+                        <li><a href="#">Cad Motivo de Bloqueio</a></li>
+                        <li><a href="#">Cad Quarto</a></li>
+                        <li><a href="#">Cad Saída Leito</a></li>
+                        <li><a href="#">Histórico do Leito</a></li>
+                        <li><a href="#">Reservar Leito</a></li>
+                        <li><a href="#">Transferência de Paciente</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-user"></i>Paciente
+                     <ul>
+                        <li><a href="#">Autorizar Procedimento</a></li>
+                        <li><a href="#">Cad Paciente</a></li>
+                        <li><a href="#">Histórico de Agendamentos</a></li>
+                        <li><a href="#">Histórico de Atendimentos</a></li>
+                        <li><a href="#">Histórico de Ocupação de Leito</a></li>
+                        <li><a href="#">Histórico de Prescrições </a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-user"></i>Profissional
+                     <ul>
+                        <li><a href="#">Bloquear Agenda</a></li>
+                        <li><a href="#">Cad Agenda</a></li>
+                        <li><a href="#">Cad Filas do Profissional de Saúde</a></li>
+                        <li><a href="#">Cad Profissional</a></li>
+                        <li><a href="#">Consultar Agenda</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-pie_chart"></i>Relatórios
+                     <ul>
+                        <li><a href="#">AIH</a></li>
+                        <li><a href="#">AIH por Bairro</a></li>
+                        <li><a href="#">AIH por Caráter de Internação</a></li>
+                        <li><a href="#">AIH por CID</a></li>
+                        <li><a href="#">AIH por Paciente</a></li>
+                        <li><a href="#">AIH por Procedimento</a></li>
+                        <li><a href="#">AIH por Profissional</a></li>
+                        <li><a href="#">Atendimento em Grupo por Profissional</a></li>
+                        <li><a href="#">Atendimento Médico por Idade</a></li>
+                        <li><a href="#">Atendimentos Especiais por Profissional</a></li>
+                        <li><a href="#">Atendimentos Realizados Por Faixa Etária</a></li>
+                        <li><a href="#">Comparativo de Procedimentos Realizados por Prestadores</a></li>
+                        <li><a href="#">Consultas Agendadas</a></li>
+                        <li><a href="#">Exames Realizados por Unidade</a></li>
+                        <li><a href="#">Pacientes Atendidos Por Faixa Etária</a></li>
+                        <li><a href="#">Pacientes Por Data De Inclusão</a></li>
+                        <li><a href="#">Produção do Profissional</a></li>
+                        <li><a href="#">Produção do Profissional (dia)</a></li>
+                        <li><a href="#">Produção por Unidade</a></li>
+                        <li><a href="#">Situação de Agendamentos por Especialidade</a></li>
+                        <li><a href="#">Situação de Agendamentos por Profissional</a></li>
+                     </ul>
+                  </li>                  
+               </ul>
+            </li>
+            <li><i class="icon-book"></i>Controle Acadêmico
+               <ul>
+                  <li><i class="icon-pie_chart"></i>Relatórios
+                     <ul>
+                        <li><a href="#">Alunos Transferidos</a></li>
+                        <li><a href="#">Relação Unidades de Ensino por Curso</a></li>
+                        <li><a href="#">Frequência Alunos Bolsa Família</a></li>
+                        <li><a href="#">Alunos Por Unidades de Ensino</a></li>
+                        <li><a href="#">Docentes Por Unidades de Ensino</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-cog"></i>Configurações
+                     <ul>
+                        <li><a href="#">Tipo de Licença Férias</a></li>
+                        <li><a href="#">Tipo de Evento</a></li>
+                        <li><a href="#">Tipo de Necessidade Especial</a></li>
+                        <li><a href="#">Tipo de Rede de Ensino</a></li>
+                        <li><a href="#">Tipo Periodo Atividades</a></li>
+                        <li><a href="#">Tipo Periodo Aulas</a></li>
+                        <li><a href="#">Tipo de Sala</a></li>
+                        <li><a href="#">Tipo Resultado Avaliação</a></li>
+                        <li><a href="#">Grupo Conceitos Avaliação</a></li>
+                        <li><a href="#">Tipo Permissão Sobre Aluno</a></li>
+                        <li><a href="#">Tipo Permissão Aluno</a></li>
+                        <li><a href="#">Tipo de Motivo de Desistência</a></li>
+                        <li><a href="#">Tipo Problema Saúde</a></li>
+                        <li><a href="#">Tipo de Especificidade</a></li>
+                        <li><a href="#">Tipo de Resultado Final</a></li>
+                        <li><a href="#">Tipo de Ensino</a></li>
+                        <li><a href="#">Tipo de Unidade de Ensino</a></li>
+                        <li><a href="#">Tipo de Título Unidade Ensino</a></li>
+                        <li><a href="#">Tipo de Curso de Formação</a></li>
+                        <li><a href="#">Tipo de Nível de Curso</a></li>
+                        <li><a href="#">Tipo de Classe</a></li>
+                        <li><a href="#">Tipo de Duração</a></li>
+                        <li><a href="#">Tipo de Funcionário Escolar</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-shop"></i>Estrutura Educacional
+                     <ul>
+                        <li><a href="#">Eventos Gerais</a></li>
+                        <li><a href="#">Setor</a></li>
+                        <li><a href="#">Unidades de Ensino</a></li>
+                        <li><a href="#">Calendários</a></li>
+                        <li><a href="#">Salas</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Disciplinas</a></li>
+                        <li><a href="#">Base Curricular</a></li>
+                        <li><a href="#">Classes</a></li>
+                        <li><a href="#">Grupos de Períodos de Aula</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-user"></i>Cadastro Pessoal
+                     <ul>
+                        <li><a href="#">Aluno</a></li>
+                        <li><a href="#">Docente</a></li>
+                        <li><a href="#">Outros Funcionários</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-square_ok"></i>Gestão de Vagas
+                     <ul>
+                        <li><a href="#">Período de Inscrição</a></li>
+                        <li><a href="#">Solicitações de Vagas</a></li>
+                        <li><a href="#">Lista de Solicitações de Vagas</a></li>
+                        <li><a href="#">Matrícula de Aluno</a></li>
+                        <li><a href="#">Lista de Alunos da Classe</a></li>
+                        <li><a href="#">Transferências</a></li>
+                        <li><a href="#">Cadastrar Agenda Pré-Inscrição</a></li>
+                        <li><a href="#">Bloquear Agendamento Pré-Inscrição</a></li>
+                        <li><a href="#">Agendar Pré-Inscrição</a></li>
+                        <li><a href="#">Atendimento Agendamentos Pré-Inscrição</a></li>
+                        <li><a href="#">Rematrícula de Alunos</a></li>
+                        <li><a href="#">Fila Pré-Matrícula Setor</a></li>
+                        <li><a href="#">Dispensa de Aluno para Disciplina</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-pen_3"></i>Acompanhamento de Classe
+                     <ul>
+                        <li><a href="#">Transcrição de Histórico </a></li>
+                        <li><a href="#">Diário de Classe</a></li>
+                        <li><a href="#">Resultado Avaliação Período</a></li>
+                        <li><a href="#">Resultado Final</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-calendar"></i>Planejamento Escolar
+                     <ul>
+                        <li><a href="#">Atribuição de Disciplinas</a></li>
+                        <li><a href="#">Quadro Acompanhamento Atribuição</a></li>
+                        <li><a href="#">Arquivo Pontuação Docentes</a></li>
+                        <li><a href="#">Pontuação do Docente</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-documents"></i>Geração de Documentos
+                     <ul>
+                        <li><a href="#">Gerar atestado de matrícula</a></li>
+                        <li><a href="#">Gerar Boletim</a></li>
+                        <li><a href="#">Gerar atestado de conclusão de curso</a></li>
+                        <li><a href="#">Gerar Grade Aulas</a></li>
+                        <li><a href="#">Gerar Histórico Escolar</a></li>
+                     </ul>
+                  </li>                  
+               </ul>
+            </li>            
+            <li><i class="icon-cab"></i>Frotas
+               <ul>
+                  <li><i class="icon-notepad_add"></i>Cadastros
+                     <ul>
+                        <li><a href="#">Equipamentos</a></li>
+                        <li><a href="#">Máquinas</a></li>
+                        <li><a href="#">Oficinas</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Veículos</a></li>
+                     </ul>
+                  </li>
+                  <li><i class="icon-cog"></i>Configurações
+                     <ul>
+                        <li><a href="#">Bombas</a></li>
+                        <li><a href="#">Tanques</a></li>
+                        <li><a href="#">Modelos de Equipamentos</a></li>
+                        <li><a href="#">Modelos de Máquinas</a></li>
+                        <li><a href="#">Tipos de Equipamentos</a></li>
+                        <li><a href="#">Tipos de Combustiveis</a></li>
+                        <li><a href="#">Tipos de Cores</a></li>
+                        <li><a href="#">Tipos de Fabricantes</a></li>
+                        <li><a href="#">Tipos de Máquinas</a></li>
+                        <li><a href="#">Modelos de Veículos</a></li>
+                        <li><a href="#">Tipos de Veículos</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         </div>
+      </nav>
+
+		<div class="main content" role="main">
+		  <form>
+		  	<h2>Você está em Módulo | Sessão | Tela</h2>
+
+			<fieldset class="full-l">
+				<legend>Nome do Fieldset</legend>
+
+				<div class="form-body">
+					<div class="row">
+						<div class="col-md-3 form-group">							
+							<label for="a1" class="col-lg-12">Col A Input 1</label>
+							<div class="col-lg-12">
+								<input class="form-control input" id="a1" placeholder="Col A Input 1" />
+							</div>
+						</div>
+
+						<div class="col-md-5 form-group">							
+							<label for="a2" class="col-lg-12">Col A Input 2</label>
+							<div class="col-lg-12">
+								<input class="form-control input" id="a2" placeholder="Col A Input 1" />
+							</div>							
+						</div>
+
+						<div class="col-sm-2 form-group">							
+							<label for="a3" class="col-sm-12">Col A Input 3</label>
+							<div class="col-sm-12">
+								<input class="form-control input" id="a3" placeholder="Col A Input 1" />
+							</div>							
+						</div>
+
+						<div class="col-sm-2 form-group">							
+							<label for="a3" class="col-sm-12">Col A Input 3</label>
+							<div class="col-sm-12">
+								<input class="form-control input" id="a3" placeholder="Col A Input 1" />
+							</div>							
+						</div>
+					</div>
+					<!-- -->
+					<div class="row">
+						<div class="col-md-2 form-group">							
+							<label for="a3" class="col-sm-12 control-label">Col A Input 4</label>
+							<div class="col-sm-12">
+								<input class="form-control input" id="a3" placeholder="Col A Input 1" />
+							</div>							
+						</div>
+
+						<div class="col-md-3 form-group">							
+							<label for="a3" class="col-sm-12 control-label">Col A Input 5</label>
+							<div class="col-sm-12">
+								<input class="form-control input" id="a3" placeholder="Col A Input 1" />
+							</div>							
+						</div>
+
+						<div class="col-md-5 form-group">							
+							<label for="a3" class="col-sm-12 control-label">Col A Input 6</label>
+							<div class="col-sm-12">
+								<input class="form-control input" id="a3" placeholder="Col A Input 1" />
+							</div>							
+						</div>
+
+						<div class="col-md-2 form-group">							
+							<label for="a3" class="col-sm-12 control-label">Col A Input 6</label>
+							<div class="col-sm-12">
+								<input class="form-control input" id="a3" placeholder="Col A Input 1" />
+							</div>							
+						</div>
+					</div>
+					<!-- -->
+				</div>
+			</fieldset>
+
+			<div class="bloco-abas full-l">
+				<ul>
+					<li><a href="#id-1">Campos diversos</a></li>
+					<li><a href="#id-2">Excluir/Alterar</a></li>
+					<li><a href="#id-3">TextArea com limites de caracteres</a></li>
+					<li><a href="#id-4">Campos de data</a></li>
+					<li><a href="#id-5">Incluir (mostrar/expandir)</a></li>
+				</ul>
+
+				<div id="id-1">
+					<div class="form-body">
+						<div class="row">
+
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-lg-12 obrigatorio">Col A Input 1:</label>
+								<input class="form-control input col-lg-12" id="a1" placeholder="Col A Input 1" />
+							</div>
+
+							<div class="col-md-3 form-group">							
+								<label for="select" class="col-lg-12">Col A Select 1:</label>
+								<select name="select" id="select" class="form-control input col-md-12">
+									<option>Escolha</option>
+									<option>Opção 1</option>
+									<option>Opção 2</option>
+									<option>Opção 3</option>
+								</select>
+							</div>
+
+							<div class="col-md-5 form-group">
+								<label class="col-md-12 col-xs-12">Escolha uma das opções:</label>
+								<label class="checkbox-inline"><input type="checkbox" value="">Opção 1</label>
+								<label class="checkbox-inline"><input type="checkbox" value="">Opção com título maior 2</label>
+								<label class="checkbox-inline"><input type="checkbox" value="">Opção tit. médio 3</label>
+							</div>
+
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-lg-12">Col A Input 2:</label>
+								<input class="form-control input col-lg-12" readonly id="a1" placeholder="Col A Input 1" />
+							</div>
+
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-lg-12">Col A Input 2:</label>
+								<input class="form-control input col-lg-12" id="a1" placeholder="Col A Input 1" />
+								<i class="icon-info-circled icon-info" title="Texto Explicativo sobre uma informação relevante"></i>
+							</div>
+
+						</div>
+
+						<div class="form-body">
+							<div class="row">
+
+								<div class="col-md-5 form-group">
+									<label class="col-md-12 col-xs-12">Escolha uma das opções:</label>
+									<label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
+									<label class="radio-inline"><input type="radio" name="optradio">Opção com título maior 2</label>
+									<label class="radio-inline"><input type="radio" name="optradio">Opção tit. médio 3</label>
+								</div>
+
+								<div class="col-md-4 form-group">							
+									<label for="a1" class="col-lg-12">Col A Input 2:</label>
+									<input class="input input-4-btn col-lg-6" id="a1" placeholder="Col A Input 1" />
+									<button name="botao" id="botao" type="button" class="btn btn-success btn-4-input input col-lg-1">
+										<i class="icon-magnifying_glass"></i>
+									</button>
+									<button name="botao" id="botao" type="button" class="btn-success input h-space col-lg-4">
+										<i class="icon-magnifying_glass h-space"></i>Busca Avançada
+									</button>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div><!-- fim #id-1 -->
+
+				<div id="id-2">
+
+					<div id="box-campos">
+						<div class="col-md-2 form-group">							
+							<label for="a1" class="col-lg-12">Col A Input 2:</label>
+							<input class="form-control input col-lg-12" id="a1" placeholder="Col A Input 1" />
+						</div>
+						
+						<div class="col-md-3 form-group">							
+							<label for="select" class="col-lg-12">Col A Select 1:</label>
+							<select name="select" id="select" class="form-control input col-md-12">
+								<option>Escolha</option>
+								<option>Opção 1</option>
+								<option>Opção 2</option>
+								<option>Opção 3</option>
+							</select>
+						</div>
+
+						<div class="col-md-5 form-group">							
+							<label for="a1" class="col-lg-12">Col A Input 2:</label>
+							<input class="form-control input col-lg-12" id="a1" placeholder="Col A Input 1" />
+						</div>
+
+						<div class="col-md-2 form-group">							
+							<label for="a1" class="col-lg-12">Col A Input 2:</label>
+							<input class="form-control input col-lg-12" id="a1" placeholder="Col A Input 1" />
+						</div>
+					</div><!-- fim .box-campos -->
+
+					<div class="tabela">
+					   <table>
+					      <thead>
+					         <tr>
+					            <th style="width:4%"></th>
+					            <th style="width:4%"></th>
+					            <th style="width:70%">Nome</th>
+					            <th style="width:12%">Complemento</th>
+					            <th style="width:10%">Confiabilidade</th>
+					         </tr>
+					      </thead>
+					      <tbody>
+					         <tr>
+					            <td><a href="#" title="Excluir"><i class="glyphicon glyphicon-trash ic-excluir"></i></a></td>
+					            <td><a href="#" title="Alterar" onclick="alterar('#box-campos')"><i class="glyphicon glyphicon-pencil ic-alterar"></i></a></td>
+					            <td>sa dsa d asd sad</td>
+					            <td>fsdfsd gfgdf gsdf gs</td>
+					            <td>teste</td>
+					         </tr>
+					         <tr>
+					            <td><a href="#" title="Excluir"><i class="glyphicon glyphicon-trash ic-excluir"></i></a></td>
+					            <td><a href="#" title="Alterar" onclick="alterar('#box-campos')"><i class="glyphicon glyphicon-pencil ic-alterar"></i></a></td>
+					            <td> dfg sag sdf gsdf g</td>
+					            <td>asdfsdaf dsaf </td>
+					            <td>gsdfgsdfgsdfg</td>
+					         </tr>
+					      </tbody>
+					   </table>
+					</div><!-- fim .tabela -->
+
+				</div><!-- fim #id-2 -->
+
+				<div id="id-3">
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<label for="a1" class="col-lg-12">Máximo de 250 caracteres:</label>
+							<textarea class="form-control textarea col-lg-12 max-250"></textarea>
+							<p class="max-caracteres">Caracteres restantes: <span class="restantes"></span></p>
+						</div>
+
+						<div class="col-md-6 form-group">
+							<label for="a1" class="col-lg-12">Máximo de 256 caracteres:</label>
+							<textarea class="form-control textarea col-lg-12 max-256"></textarea>
+							<p class="max-caracteres">Caracteres restantes: <span class="restantes"></span></p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<label for="a1" class="col-lg-12">Máximo de 512 caracteres:</label>
+							<textarea class="form-control textarea col-lg-12 max-512"></textarea>
+							<p class="max-caracteres">Caracteres restantes: <span class="restantes"></span></p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<label for="a1" class="col-lg-12">Máximo de 2048 caracteres:</label>
+							<textarea class="form-control textarea col-lg-12 max-2048"></textarea>
+							<p class="max-caracteres">Caracteres restantes: <span class="restantes"></span></p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<label for="a1" class="col-lg-12">Máximo de 4096 caracteres:</label>
+							<textarea class="form-control textarea col-lg-12 max-4096"></textarea>
+							<p class="max-caracteres">Caracteres restantes: <span class="restantes"></span></p>
+						</div>
+					</div>
+				</div><!-- fim #id-3 -->
+
+				<div id="id-4">
+					
+					<fieldset>
+						<legend>Datas com limite</legend>
+						<div class="row">
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Data até a Atual:</label>
+								<input class="form-group input col-md-9 datepicker dataMaxAtual" id="a11" placeholder="dd/mm/aaaa" />
+							</div>
+
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Data a partir da Atual:</label>
+								<input class="form-group input col-md-9 datepicker dataMinAtual" id="a22" placeholder="dd/mm/aaaa" />
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<legend>Datas com início e fim</legend>
+						<div class="row">
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Data Inicial:</label>
+								<input class="form-group input col-md-9 datepicker dataComparada" id="a333" placeholder="Col A Input 1" />
+							</div>
+							
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Data Final:</label>
+								<input class="form-group input col-md-9 datepicker dataAposComparada" id="a444" placeholder="Col A Input 1" />
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<legend>Datas apenas com o mês</legend>
+						<div class="row">
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Mês até o Atual:</label>
+								<input class="form-group input col-md-9 monthpicker mesMaxAtual" id="a5" placeholder="Col A Input 1" />
+							</div>
+							
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Mês a partir do Atual:</label>
+								<input class="form-group input col-md-9 monthpicker mesMinAtual" id="a6" placeholder="Col A Input 1" />
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<legend>Comparar datas apenas com mês</legend>
+						<div class="row">
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Mês inicial:</label>
+								<input class="form-group input col-md-9 monthpicker mesComparado" id="a7" placeholder="Col A Input 1" />
+							</div>
+							
+							<div class="col-md-2 form-group">							
+								<label for="a1" class="col-md-12">Mês final:</label>
+								<input class="form-group input col-md-9 monthpicker mesAposComparado" id="a8" placeholder="Col A Input 1" />
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<legend>Calcular tempo transcorrido</legend>
+						<div class="row">
+							<div class="col-md-2 form-group">							
+								<label for="a44444" class="col-md-12">Calcular Tempo:</label>
+								<input class="form-group input col-md-9 datepicker dataTranscorrida" id="a44444" placeholder="Col A Input 1" />
+								<p class="idade"></p>
+							</div>
+						</div>
+					</fieldset>
+
+				</div><!-- fim #id-4 -->
+
+				<div id="id-5">
+					
+					<div class="painelIncluir">
+						<div class="tit_incluir">
+							<h3>Título do Campo Incluir</h3>
+							<i class="glyphicon glyphicon-plus incluir" title="Incluir"></i>
+						</div>
+						<div class="campos_incluir">
+							campos
+						</div>
+					</div>
+
+				</div><!-- fim #id-5 -->
+
+			</div>
+
+			<div class="tabela tabela-fixa full-l">
+			   <table>
+			      <thead>
+			         <tr>
+			            <th style="width:8vw">
+			               <a href="#">ID <div class="table-sort"><i class="table-sort-up"></i><i class="table-sort-down"></i></div></a>
+			            </th>
+			            <th style="width:70vw">
+			               <a href="#">Nome <div class="table-sort"><i class="table-sort-up"></i><i class="table-sort-down"></i></div>
+			               </a>
+			            </th>
+			            <th style="width:12vw">Complemento</th>
+			            <th style="width:10vw">Confiabilidade</th>
+			         </tr>
+			      </thead>
+			      <tbody>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nas
+			            c.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			         <tr>
+			            <td><a href="1810">123</a></td>
+			            <td><a href="1810"><b>Nome de Exemplo Numero Um</b><br>RUA Exemplo, 123, Nome do Bairro, Cidade - SP - BRASIL</a></td>
+			            <td><a href="1810">Nasc.: dd/mm/aaaa<br>RG: 12.345.678-9<br></a></td>
+			            <td>
+			               <a href="1810">
+			                  <center><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"><img src="img/farol_vermelho.gif"></center>
+			               </a>
+			            </td>
+			         </tr>
+			      </tbody>
+			   </table>
+
+				<div class="paginador">
+					<div class="col-md-2">
+					   <select id="regPorPagina" name="regPorPagina" class="input col-md-10">
+				         <option value="5">5</option>
+				         <option value="10">10</option>
+				         <option value="15" selected="selected">15</option>
+				         <option value="25">25</option>
+				         <option value="50">50</option>
+				         <option value="100">100</option>
+				       </select>
+			       </div>
+			       <div class="col-md-1 v-space">
+					   <i class="icon-to-start-alt"></i>
+					   <i class="icon-to-start"></i>
+				   </div>
+			       <div class="col-md-2">
+					   <label class="col-md-4">Página:</label>
+					   <input type="text" class="input col-md-4">
+					   <span class="col-md-4"> de 7353 </span>
+				   </div>
+				   <div class="col-md-1 v-space">
+					   <i class="icon-to-end-alt"></i>
+					   <i class="icon-to-end"></i>
+				   </div>
+				   <div class="col-md-5 v-space">
+					   <i class="icon-arrows-cw"></i>
+					   <span>exibindo de 16 até 30 de 110290 registros</span>
+				   </div>
+				</div><!-- fim .paginador -->
+
+				<div id="confirmar" style="display: none">
+					<p>Deseja realmente excluir este item?</p>					
+				</div>
+
+		  </form>
+		</div><!-- fim #main -->
+
+		<footer>
+			<div class="footer-toolbar col-md-12">
+				<button name="botao" type="button" class="btn-success input col-md-1">
+					<i class="glyphicon glyphicon-floppy-disk h-space"></i>Salvar
+				</button>
+				
+				<button name="botao" type="button" class="btn-primary input col-md-1">
+					<i class="glyphicon glyphicon-file h-space"></i>Novo
+				</button>
+				
+				<button name="botao" type="button" class="btn-warning input col-md-1">
+					<i class="glyphicon glyphicon-ban-circle h-space"></i>Cancelar
+				</button>
+			</div>
+		</footer>
+		
+	</body>
+</html>

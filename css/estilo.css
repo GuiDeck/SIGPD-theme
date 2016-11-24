@@ -1,0 +1,639 @@
+body {
+    font-family: 'Lato', sans-serif!important;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+header{
+	width: 100%;
+	height: 45px;
+	border:1px solid #ccc;
+	border-right: none;
+}
+
+header h1{
+	font-size: 30px;
+	width: 15%;
+	height: 45px;
+	margin: 0;
+	background-color: #3690BD;
+	color:#FFF;
+	float: left;
+}
+
+header .usuario{
+    width: 415px;
+    float: right;
+    height: 45px;
+	color:#898686;
+	font-size: 12px;
+}
+
+header .menu-hamburger{
+	float: left;
+	margin: 10px;
+	font-size: 17px;
+	color: #444;
+	cursor:pointer;
+}
+
+header .usuario .user, header .usuario .uor, header .usuario .help, header .usuario .comunicados, header .usuario .sair{
+    float: left;
+	padding: 11px;
+}
+
+header .usuario .uor{
+	border-right: 1px solid #ccc;
+	height: 44px;
+}
+
+header .usuario .help{
+	border-right: 1px solid #ccc;
+}
+
+header .usuario .help a{
+	background-color: #3690BD;
+	color:#FFF;
+	border-radius: 13px;
+	padding: 4px 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+header .usuario .comunicados{
+	padding: 10px 16px 10px 4px;
+}
+
+header .usuario .comunicados i{
+	font-size: 20px;
+	color: #ccc;			
+}
+
+header .usuario .comunicados span{
+	font-size: 11px;
+	background-color: #3690BD;
+	color: #FFF;
+	margin: -5px 0 0 -10px;
+	padding: 1px 6px;
+	font-style: normal;
+	border-radius: 9px;
+	float: right;
+	position: absolute;
+}
+
+header .usuario .sair{
+	background: #3690BD;
+	color: #fff;
+	padding: 10px 15px;
+	height: 44px;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+}
+
+nav{
+	width: calc(15% + 1px);
+	background-color: #3690BD;
+	height: calc(100vh - 45px);
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+}
+
+nav .menu-titulo{
+	position: fixed;
+	width: 15%;
+	background-color: #266584;
+	color:#FFF;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+nav .menu-titulo i{ 
+	padding-right: 10px !important;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li, nav ul li a, nav ul li a:active, nav ul li a:hover{
+	color:#FFF!important;
+	padding: 10px 20px 10px 0;
+	text-decoration: none!important;
+	cursor: pointer;
+	outline: none!important;
+}
+
+nav ul li ul li:hover, nav .ativo{
+	background: rgba(255,255,255,.2);
+}
+
+nav ul li ul{
+	margin: 10px -10px -10px -20px;
+	padding: 0 20px;
+	width: 250px;
+}
+
+nav ul li ul li{
+	padding: 9px 10px 9px 2px;
+	width: 222px;
+}
+
+nav ul li ul li ul{
+	background-color: #266584;
+}
+
+.modulos{
+   	position: fixed;
+	top: 82px;
+	left: 0;
+	background: #FFF;
+	width: 15.05%;
+   	display:none;
+}
+
+.modulos ul li:hover{
+   color:#3690BD!important;
+}
+
+.modulos ul li{
+   color:#999!important;
+   padding-left: 10px;
+}
+
+.modulos ul li i{
+   font-size: 11px;
+   padding: 0 6px;
+   margin-left: -10px;
+}
+
+.main{
+	height: calc(100% - 91px);
+	background-color: #f2f4f8;
+	width: calc(100% - 15% - 3px);
+	position: absolute;
+	right: 0;
+	top: 45px;
+	overflow-y: scroll;
+}
+
+.main h2{
+	font-size: 15px;
+	font-weight: normal;
+	color: #4193BD;
+	padding: 15px;
+	font-style: italic;
+	margin: 0;
+}
+
+.main form{
+    position: relative;
+    /*padding-right: 60px;*/
+    padding: 0 15px;
+}
+
+.main fieldset{
+	background-color: #fff;
+	border: 1px solid #ddd;
+	font-size: 11px;
+	margin-bottom: 15px;
+	padding: 40px 20px 10px;
+	overflow: hidden !important;
+	position: relative;
+}
+
+.main legend {
+	background-color: #F0F0F0;
+	border-bottom: 1px solid #ddd;
+	color: #777777;
+	font-size: 10px;
+	padding: 7px 6px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	letter-spacing: 1px;
+}
+
+.main label{
+	display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 300;
+    color: #434242;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+}
+
+.main .input {
+    display: block;
+    height: 29px !important;
+    padding: 4px;
+    font-size: 12px;
+    line-height: 1.6;
+    word-break: break-all;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    overflow: hidden;
+}
+
+.main .textarea {
+    display: block;
+    padding: 4px;
+    font-size: 12px;
+    line-height: 1.6;
+    word-break: break-all;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    overflow: hidden;
+}
+
+.main .obrigatorio:after{
+	content:"*";
+	color: #CC0000;
+}
+
+.main .input-4-btn{
+	border-radius: 3px 0 0 3px;
+	border-right: none;
+	float: left;
+	height: 29px;
+}
+
+.main .btn-4-input{
+	border-radius: 0 3px 3px 0;
+	float: left;
+	height: 29px;
+}
+
+.obrigatorio + input, .obrigatorio + select, .obrigatorio + textarea {
+    border-color: #CC0000!important;
+}
+
+.bloco-abas{
+	width: 97%;
+	margin: 0 auto 15px;
+}
+
+/* Estilos para componentes do Jquery UI */
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+	font-family: "Lato", sans-serif !important; 
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.ui-corner-all{
+	border-radius: 0;
+}
+
+.ui-widget-header {
+    border: 1px solid #ddd;
+    background: #F0F0F0;
+    color: #333;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #266584;
+    background: #3690BD;
+    color: #fff;
+}
+
+.ui-widget-content {
+	color: #434242;
+	font-family: "Lato", sans-serif !important; 
+}
+
+.ui-dialog-titlebar{
+	background-color: #3690BD;
+	color:#FFF;
+}
+
+ui-dialog-buttonset{
+	float: none;
+}
+
+.ui-dialog-buttonset .ui-button:hover{
+	background-color: #47aa40;
+}
+
+.ui-dialog-buttonset .ui-button{
+	background: #5cb85c;
+	border-color: #47aa40;
+	color:#FFF;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.ui-dialog-buttonpane{
+	background: #E6E6E6;
+}
+
+.ui-datepicker-header{
+	background: #3690BD!important;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+	color:#FFF;
+}
+
+.ui-datepicker-trigger{
+	height: 31px;
+	width: 31px;
+	margin-top: -1px;
+	float: left;
+}
+
+.ui-datepicker-div.ui-monthpicker {
+    padding: 0.2em;
+}
+.ui-datepicker-div.ui-monthpicker .ui-datepicker-calendar {
+    display: none;
+}
+
+/* Fim estilos para jQuery UI */
+
+/* Personalização do Bootstrap */
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.checkbox-inline{
+	padding-top: 3px;
+}
+
+/* Fim personalização bootstrap */
+
+/* -- Classes gerais -- */
+
+.full-l{
+	width: 100%;
+}
+
+.center{
+	margin: 0 auto!important;
+}
+
+.left{
+	float: left!important;
+}
+
+.right{
+	float: right!important;
+}
+
+.h-space{
+	margin: auto 3px;
+}
+
+.v-space{
+	margin: 3px auto;
+}
+
+.ic-excluir{
+	font-size: 15px;
+	color:#CD5C5C;
+}
+
+.ic-alterar{
+	font-size: 15px;
+	color:#5F9EA0;
+}
+
+.max-250, .max-256, .max-512{
+	height: 85px!important;
+}
+
+.max-1024, .max-2048, .max-4096{
+	height: 100px!important;
+}
+
+.max-caracteres{
+	font-size: 11px;
+	color: #666;
+	/*margin-top: -15px;*/
+	float: left;
+}
+
+.restantes{
+	font-size: 11px;
+	color: #0C467F;
+}
+
+.idade{
+	float: left;
+	margin: -10px 0;
+	color: #0C467F;
+	font-weight: bold;
+}
+
+.borda-erro{
+	border-color: #cc0000 !important;
+	background-color: #FDEEEE !important;
+}
+
+.btn + i{
+	padding-right: 3px;
+}
+
+/* -- classes do componente tabela -- */
+
+.tabela-fixa{
+	height: calc(100% - 225px);
+}
+
+.tabela-fixa table tbody {
+    height: calc(100vh - 256px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.tabela-fixa table tbody, .tabela-fixa table thead tr {
+    display: block;
+}
+
+.tabela{
+	/*width: 97%;*/
+	margin: 0 auto 15px;
+	background-color: #FFF;
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+
+.tabela table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.tabela table thead {
+    background-color: #5D9FC0;
+    color: #FFF;
+}
+
+.tabela th a:hover {
+    text-decoration: underline;
+}
+
+.tabela th a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.tabela table thead tr th {
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 300;
+    font-size: 10px;
+    color: #FFF;
+    padding: 10px 5px;
+    word-break: break-all;
+}
+
+.tabela table tbody tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.tabela table tbody tr:last-child td {
+    border-bottom: none!important;
+}
+
+.tabela td a:hover {
+    text-decoration: none;
+    color: #666;
+}
+
+.tabela td a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* -- */
+
+.paginador {
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    padding: 5px;
+	overflow: hidden;
+	font-size: 10px;
+}
+
+.paginador select {
+	min-width: 175px;
+}
+
+.paginador i{
+	color:#266584;
+	font-size: 12px;
+	cursor:pointer;
+}
+
+.paginador .icon-arrows-cw{
+	color:#009900;
+}
+
+.paginador label, .paginador span{
+	padding:7px 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.icon-info{
+	font-size: 20px;
+	color: #3690BD;
+	cursor: pointer;
+	margin-top: 22px;
+	position: absolute;
+}
+
+.paginador .v-space{
+	padding: 6px 0;
+	text-align: center;
+}
+
+/* --  --*/
+
+.painelIncluir{
+	width: 100%;
+	background: #F0F0F0;
+	overflow: hidden;
+}
+
+.painelIncluir{
+	width: 100%;
+}
+
+.painelIncluir .tit_incluir h3{
+	width: 75%;
+	float: left;
+	font-size: 12px;
+	margin: 0;
+	padding: 5px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+
+.painelIncluir .tit_incluir i{
+	width: 20px;
+	height: 20px;
+	background: #5cb85c;
+	color: #FFF;
+	font-size: 12px;
+	float: right;
+	padding: 4px;
+	margin: 2px 5px;
+	cursor: pointer;
+}
+
+.campos_incluir{
+	width: 100%;
+	float: left;
+	display: none;
+}
+
+/* -- Footer -- */
+
+footer{
+	position:fixed;
+	bottom:0;
+	width: 100%;
+	height: 45px;
+	background: #f0f0f0;
+	padding: 9px;
+	border-top: 1px solid #CCC;
+}
+
+footer button{
+	margin-right: 5px;
+}
+
+footer button i{
+	margin-right: 10px !important;
+}
+
+footer .footer-toolbar{
+	position: absolute;
+	left: 25%;
+}
